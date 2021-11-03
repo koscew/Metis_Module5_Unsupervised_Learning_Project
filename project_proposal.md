@@ -3,12 +3,12 @@ Chien Yuan Chang
 #### Question/need:
 I am going to use comments from board game players on [Board Game Geek](https://boardgamegeek.com/) to build unsupervised learning models to do analysis and topic modeling and build a recommendation system problem for board players to find the board games they like.
 
->* What is the framing question of your analysis, or the purpose of the model/system you plan to build? 
+>* What is the framing question of your analysis, or the purpose of the model/system you plan to build?
 >* Who benefits from exploring this question or building this model/system?
 
 #### Data Description:
 * Dataset: 
-  * I planned to scrape 40 over-500-character comments per game of Top 500 board games on [Board Game Geek](https://boardgamegeek.com/). However, there were less than 40 comments with more than 500 characters for some games. The final dataset contained total 19,868 data points.
+  * I planned to scrape 40 over-500-character comments randomly per game of Top 1000 board games on [Board Game Geek](https://boardgamegeek.com/). However, there were less than 40 comments with more than 500 characters for some games. The final dataset contained total 38,478 data points.
  
 * An individual sample/unit (total 32 columns):  
 	object\_id, username, rating, comment,  
