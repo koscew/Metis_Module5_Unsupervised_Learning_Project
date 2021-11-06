@@ -21,11 +21,12 @@ This is the fifth project of Metis Data Science Bootcamp. We are going to use da
 [Charts](images/)
 
 [Data](data/)
+--->
 
 ***
 
 [MVP](mvp.md)
---->
+
 
 ***
 
