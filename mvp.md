@@ -7,9 +7,9 @@ To start exploring this goal, I scraped 56,951 comments of top 1500 board games 
 
 The distribution of topics|Vectorizer(Binary)|Vectorizer(Count)|Cosine|Euclidean|
 :---|:---|:---|:---|:---
-NMF|20 Topics: 2%~12%|20 Topics: 1%~15%|Works|Not well
-LDA|7 Topics: 0.4%~29%|Top Topic: 94%|Works|Works
-LSA|Top Topic: 100%|Top Topic: 80%|-|-
+NMF|21 Topics: 0.1%~9.9%|21 Topics: 1.3%~15.3%|Works|Not well
+LDA|7 Topics: 0.4%~29.4%|Top Topic: 93.8%|Works|Works
+LSA|Top Topic: 100%|Top Topic: 79.8%|-|-
 
 Topic|Keywords| % of Total
 :---|:---|:---
