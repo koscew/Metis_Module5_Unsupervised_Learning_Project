@@ -2,7 +2,8 @@ import streamlit as st
 import pickle
 import pandas as pd
 import numpy as np
-from sklearn.metrics.pairwise import cosine_distances
+from sklearn.metrics.pairwise import cosine_similarity
+#from sklearn.metrics.pairwise import cosine_distances
 import spacy
 nlp = spacy.load('en_core_web_sm')
 
