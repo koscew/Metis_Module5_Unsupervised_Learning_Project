@@ -20,8 +20,8 @@ st.sidebar.markdown('# Board Game Recommendation System')
 eng = st.sidebar.selectbox('Please select a recommendation method', ['Search by Your Description','Preset Keywords'])
 
 if eng == 'Search by Your Description':
-    st.markdown('''##### Please write down the names, types, or any description of the board games you like\ 
-        or just type "game" to get random games.''')
+    st.markdown('''<p>##### Please write down the names, types, or any description of the board games you like\ 
+        or just type "game" to get random games.</p>''')
     des_input = st.text_input("(You can also switch to preset-keyword mode at the sidebar if you don't have any idea for now)")
     if des_input != '':
         flag = 0
@@ -50,7 +50,6 @@ if eng == 'Search by Your Description':
                 st.markdown(g)
 else:
     st.markdown('##### Please select one or more styles/themes/topics you like')
-    des_input = st.text_input("(You can also switch to self-enter mode at the sidebar to search by your description)")
     key_list = ['solo', 'duo', '2p', '3p', '4p', '5p', '6p', '8p', 
                 'action', 'adventure', 'alien', 'animal', 'auction', 'bidding', 
                 'card', 'character', 'city building', 'civilization', 'comics',
@@ -60,7 +59,7 @@ else:
                 'ship', 'space', 'star trek', 'star war', 'strategy', 'stock', 'story', 
                 'team', 'ticket to ride', 'tile', 'train', 'wargame', 'weapon', 'zombie']
 
-    keyword_list = st.multiselect('Please select the themes you like or switch to self', key_list)
+    keyword_list = st.multiselect('(You can also switch to self-enter mode at the sidebar to search by your description)', key_list)
     keywords = " ".join(keyword_list)
     if keyword_list != []:
         t_nlp = [[w.lemma_.lower() for w in nlp(keywords) 
