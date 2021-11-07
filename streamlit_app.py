@@ -2,7 +2,7 @@ import streamlit as st
 import pickle
 import pandas as pd
 import numpy as np
-from sklearn.metrics import pairwise_distances
+from sklearn.metrics.pairwise import cosine_distances
 import spacy
 nlp = spacy.load('en_core_web_sm')
 
@@ -32,7 +32,7 @@ if eng == 'Description':
         vt = tfidf.transform(t_clean)
         tt = nmf.transform(tfidf.transform(t_clean))
 
-        cos = pairwise_distances(tt,nmf_matrix,metric='cosine').argsort()
+        cos = cosine_distances(tt,nmf_matrix).argsort()
         game_list =[]
         for g in cos[0][:10]:
             game_list.append(f"[{title.loc[g, 'title']}](https://boardgamegeek.com/boardgame/{title.loc[g, 'object_id']})")
@@ -56,7 +56,7 @@ else:
         vt = tfidf.transform(t_clean)
         tt = nmf.transform(tfidf.transform(t_clean))
 
-        cos = pairwise_distances(tt,nmf_matrix,metric='cosine').argsort()
+        cos = cosine_distances(tt,nmf_matrix).argsort()
         game_list =[]
         for g in cos[0][:10]:
             game_list.append(f"[{title.loc[g, 'title']}](https://boardgamegeek.com/boardgame/{title.loc[g, 'object_id']})")
