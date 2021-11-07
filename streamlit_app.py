@@ -23,8 +23,8 @@ if eng == 'Description':
         flag = 0
         t_nlp = [[w.lemma_.lower() for w in nlp(des_input) 
                   if (not w.is_stop and not w.is_punct and not w.like_num) or (w.lemma_=='not')]]
-        for w in t_nlp:
-            if w in tfidf.get_feature_names():
+        for t in t_nlp:
+            if t in tfidf.get_feature_names():
                 t_clean= [' '.join(w) for w in t_nlp]
                 vt = tfidf.transform(t_clean)
                 tt = nmf.transform(tfidf.transform(t_clean))
@@ -68,7 +68,7 @@ if eng == 'Description':
             st.markdown(g)
 '''
 
-elif eng == 'Key Words':
+else:
     key_list = ['1p', '2p', '3p', '4p', '5p', '6p', '8p', 
             'action', 'adventure', 'alien', 'animal', 'auction', 'bidding', 'card', 'character', 'city building', 'civilization', 
             'deck', 'dice', 'draft', 'draw', 'dungeon', 'escape', 'expansion', 'family', 'ghost', 'hero', 'horror', 'kid',
