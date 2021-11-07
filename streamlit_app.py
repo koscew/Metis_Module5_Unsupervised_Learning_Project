@@ -44,30 +44,6 @@ if eng == 'Description':
             for g in game_list:
                 st.text('Provided information is not specific enough. Below are a list of random games for your reference')
                 st.markdown(g)
-'''
-    if des_input == 'game':
-        game_list =[]
-        for g in np.random.randint(0, 1499, 10):
-            game_list.append(f"[{title.loc[g, 'title']}](https://boardgamegeek.com/boardgame/{title.loc[g, 'object_id']})")
-        for g in game_list:
-            st.markdown(g)
-
-    elif des_input != '':
-        t_nlp = [[w.lemma_.lower() for w in nlp(des_input) 
-                  if (not w.is_stop and not w.is_punct and not w.like_num) or (w.lemma_=='not')]]
-        t_clean= [' '.join(w) for w in t_nlp]
-
-        vt = tfidf.transform(t_clean)
-        tt = nmf.transform(tfidf.transform(t_clean))
-
-        cos = cosine_distances(tt,nmf_matrix).argsort()
-        game_list =[]
-        for g in cos[0][:10]:
-            game_list.append(f"[{title.loc[g, 'title']}](https://boardgamegeek.com/boardgame/{title.loc[g, 'object_id']})")
-        for g in game_list:
-            st.markdown(g)
-'''
-
 else:
     key_list = ['1p', '2p', '3p', '4p', '5p', '6p', '8p', 
             'action', 'adventure', 'alien', 'animal', 'auction', 'bidding', 'card', 'character', 'city building', 'civilization', 
