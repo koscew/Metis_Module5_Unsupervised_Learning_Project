@@ -65,5 +65,3 @@ else:
         for g in game_list:
             st.markdown(g)
 
-if __name__ == "__main__":
-    main()
