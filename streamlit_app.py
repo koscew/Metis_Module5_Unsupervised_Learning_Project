@@ -34,7 +34,7 @@ if eng == 'Description':
                 #tt = nmf.transform(tfidf.transform(t_clean))
                 #cos = cosine_distances(tt,nmf_matrix).argsort()
                 game_list =[]
-                for g in cos[0][:10]:
+                for g in cos[0][:20]:
                     game_list.append(f"[{title.loc[g, 'title']}](https://boardgamegeek.com/boardgame/{title.loc[g, 'object_id']})")
                 for g in game_list:
                     st.markdown(g)
@@ -43,17 +43,19 @@ if eng == 'Description':
         if flag == 0:
             st.text('Provided information is not specific enough. Below are a list of random games for your reference')
             game_list =[]
-            for g in np.random.randint(0, 1499, 10):
+            for g in np.random.randint(0, 1499, 20):
                 game_list.append(f"[{title.loc[g, 'title']}](https://boardgamegeek.com/boardgame/{title.loc[g, 'object_id']})")
             for g in game_list:
                 st.markdown(g)
 else:
-    key_list = ['1p', '2p', '3p', '4p', '5p', '6p', '8p', 
-            'action', 'adventure', 'alien', 'animal', 'auction', 'bidding', 'card', 'character', 'city building', 'civilization', 
-            'deck', 'dice', 'draft', 'draw', 'dungeon', 'escape', 'expansion', 'family', 'ghost', 'hero', 'horror', 'kid',
-            'marvel', 'monster', 'pandemic', 'party', 'puzzle', 'quest', 'role', 'rpg', 
-            'ship', 'solo', 'space', 'star trek', 'star war', 'strategy', 'stock', 'story', 
-            'team', 'ticket to ride', 'tile', 'train', 'wargame', 'weapon', 'zombie']
+    key_list = ['solo', 'duo', '2p', '3p', '4p', '5p', '6p', '8p', 
+                'action', 'adventure', 'alien', 'animal', 'auction', 'bidding', 
+                'card', 'character', 'city building', 'civilization', 'comics',
+                'deck', 'dice', 'draft', 'draw', 'dungeon', 'escape', 'expansion', 
+                'family', 'ghost', 'hero', 'horror', 'kid',
+                'marvel', 'monster', 'pandemic', 'party', 'puzzle', 'quest', 'role', 'rpg', 
+                'ship', 'space', 'star trek', 'star war', 'strategy', 'stock', 'story', 
+                'team', 'ticket to ride', 'tile', 'train', 'wargame', 'weapon', 'zombie']
 
     keyword_list = st.multiselect('Please select the themes you like', key_list)
     keywords = " ".join(keyword_list)
@@ -67,7 +69,7 @@ else:
         #tt = nmf.transform(tfidf.transform(t_clean))
         #cos = cosine_distances(tt,nmf_matrix).argsort()
         game_list =[]
-        for g in cos[0][:10]:
+        for g in cos[0][:20]:
             game_list.append(f"[{title.loc[g, 'title']}](https://boardgamegeek.com/boardgame/{title.loc[g, 'object_id']})")
         for g in game_list:
             st.markdown(g)
