@@ -3,9 +3,9 @@ import pickle
 import pandas as pd
 import numpy as np
 from sklearn.metrics.pairwise import cosine_distances
-import spacy_streamlit as spacy
-models = ["en_core_web_sm", "en_core_web_md"]
-#import spacy
+#import spacy_streamlit as spacy
+#models = ["en_core_web_sm", "en_core_web_md"]
+import spacy
 nlp = spacy.load('en_core_web_sm')
 
 nmf = pickle.load(open('pickles/nmf.pkl', 'rb'))
