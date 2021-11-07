@@ -23,7 +23,7 @@ if eng == 'Description':
         flag = 0
         t_nlp = [[w.lemma_.lower() for w in nlp(des_input) 
                   if (not w.is_stop and not w.is_punct and not w.like_num) or (w.lemma_=='not')]]
-        for t in t_nlp:
+        for t in t_nlp[0]:
             if t in tfidf.get_feature_names():
                 t_clean= [' '.join(w) for w in t_nlp]
                 vt = tfidf.transform(t_clean)
