@@ -17,11 +17,13 @@ title = pickle.load(open('pickles/title.pkl', 'rb'))
 tfidf = pickle.load(open('pickles/tfidf.pkl', 'rb'))
 
 st.sidebar.markdown('# Board Game Recommendation System')
-eng = st.sidebar.selectbox('Please select a recommendation method', ['Description','Key Words'])
+eng = st.sidebar.selectbox('Please select a recommendation method', ['Search by Your Description','Preset Keywords'])
 
-if eng == 'Description':
-    des_input = st.text_input('''Please write down some description of the board games 
-                    you like or just type "game" to get random games''')
+if eng == 'Search by Your Description':
+    st.markdown('''# Please write down some description of the board games 
+                    you like or just type "game" to get random games. 
+                    You can also switch to "Preset Keywords" mode at the sidebar''')
+    des_input = st.text_input()
     if des_input != '':
         flag = 0
         t_nlp = [[w.lemma_.lower() for w in nlp(des_input) 
@@ -57,7 +59,7 @@ else:
                 'ship', 'space', 'star trek', 'star war', 'strategy', 'stock', 'story', 
                 'team', 'ticket to ride', 'tile', 'train', 'wargame', 'weapon', 'zombie']
 
-    keyword_list = st.multiselect('Please select the themes you like', key_list)
+    keyword_list = st.multiselect('Please select the themes you like or switch to self', key_list)
     keywords = " ".join(keyword_list)
     if keyword_list != []:
         t_nlp = [[w.lemma_.lower() for w in nlp(keywords) 
