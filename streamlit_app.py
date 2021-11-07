@@ -67,8 +67,6 @@ if eng == 'Description':
         for g in game_list:
             st.markdown(g)
 '''
-
-#Key Words
 else:
     key_list = ['1p', '2p', '3p', '4p', '5p', '6p', '8p', 
             'action', 'adventure', 'alien', 'animal', 'auction', 'bidding', 'card', 'character', 'city building', 'civilization', 
