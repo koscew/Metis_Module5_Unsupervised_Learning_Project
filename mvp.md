@@ -1,4 +1,4 @@
-## Prediction of the Fastball
+## Recommendation System of Board Games
 ###### Chien Yuan Chang
 
 The goal of this project is to do analysis and topic modeling to build a recommendation system for board game players to find the board games they like.
