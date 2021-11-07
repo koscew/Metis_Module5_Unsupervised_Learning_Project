@@ -20,9 +20,8 @@ st.sidebar.markdown('# Board Game Recommendation System')
 eng = st.sidebar.selectbox('Please select a recommendation method', ['Search by Your Description','Preset Keywords'])
 
 if eng == 'Search by Your Description':
-    st.markdown('''# Please write down some description of the board games you like or just type "game" to get random games. 
-        You can also switch to "Preset Keywords" mode at the sidebar''')
-    des_input = st.text_input('')
+    st.markdown('### Please write down some description of the board games you like or just type "game" to get random games.')
+    des_input = st.text_input('You can also switch to "Preset Keywords" mode at the sidebar')
     if des_input != '':
         flag = 0
         t_nlp = [[w.lemma_.lower() for w in nlp(des_input) 
