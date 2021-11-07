@@ -17,7 +17,7 @@ tfidf = pickle.load(open('pickles/tfidf.pkl', 'rb'))
 eng = st.sidebar.selectbox('Please select a recommendation method', ['Description','Key Words'])
 
 if eng == 'Description':
-    des_input = st.text_input('''Write down the descrition of the board games 
+    des_input = st.text_input('''Please write down the types, themes and description of the board games 
                     you like or just type "game" to get random games''')
     if des_input == 'game':
         game_list =[]
@@ -43,7 +43,7 @@ if eng == 'Description':
 
 else: 
     key_list = ['action', 'adventure', 'alien', 'animal', 'auction', 'bidding', 'card', 'character', 'city building', 'civilization', 
-            'deck', 'dice', 'draft', 'draw', 'dungeon', 'escape', 'expansion', 'ghost', 'hero', 'horror', 'kid',
+            'deck', 'dice', 'draft', 'draw', 'dungeon', 'escape', 'expansion', 'family', 'ghost', 'hero', 'horror', 'kid',
             'marvel', 'monster', 'pandemic', 'party', 'puzzle', 'quest', 'role', 'rpg', 
             'ship', 'solo', 'space', 'star trek', 'star war', 'strategy', 'stock', 'story', 
             'team', 'ticket to ride', 'tile', 'train', 'wargame', 'weapon', 'zombie']
