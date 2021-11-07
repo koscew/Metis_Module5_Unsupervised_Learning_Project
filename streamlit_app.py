@@ -38,11 +38,11 @@ if eng == 'Description':
                 flag += 1
                 break
         if flag == 0:
+            st.text('Provided information is not specific enough. Below are a list of random games for your reference')
             game_list =[]
             for g in np.random.randint(0, 1499, 10):
                 game_list.append(f"[{title.loc[g, 'title']}](https://boardgamegeek.com/boardgame/{title.loc[g, 'object_id']})")
             for g in game_list:
-                st.text('Provided information is not specific enough. Below are a list of random games for your reference')
                 st.markdown(g)
 else:
     key_list = ['1p', '2p', '3p', '4p', '5p', '6p', '8p', 
