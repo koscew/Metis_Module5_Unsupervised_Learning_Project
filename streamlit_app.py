@@ -42,7 +42,8 @@ if eng == 'Description':
             st.markdown(g)
 
 else: 
-    key_list = ['action', 'adventure', 'alien', 'animal', 'auction', 'bidding', 'card', 'character', 'city building', 'civilization', 
+    key_list = ['1p', '2p', '3p', '4p', '5p', '6p', '8p', 
+            'action', 'adventure', 'alien', 'animal', 'auction', 'bidding', 'card', 'character', 'city building', 'civilization', 
             'deck', 'dice', 'draft', 'draw', 'dungeon', 'escape', 'expansion', 'family', 'ghost', 'hero', 'horror', 'kid',
             'marvel', 'monster', 'pandemic', 'party', 'puzzle', 'quest', 'role', 'rpg', 
             'ship', 'solo', 'space', 'star trek', 'star war', 'strategy', 'stock', 'story', 
