@@ -17,7 +17,7 @@ tfidf = pickle.load(open('pickles/tfidf.pkl', 'rb'))
 eng = st.sidebar.selectbox('Please select a recommendation method', ['Description','Key Words'])
 
 if eng == 'Description':
-    des_input = st.text_area('''Please write down the types, themes and description of the board games 
+    des_input = st.text_input('''Please write down the types, themes and description of the board games 
                     you like or just type "game" to get random games''')
     if des_input != '':
         flag = 0
