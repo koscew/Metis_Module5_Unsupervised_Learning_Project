@@ -16,7 +16,7 @@ pca_proj = pickle.load(open('pickles/pca_proj.pkl', 'rb'))
 title = pickle.load(open('pickles/title.pkl', 'rb'))
 tfidf = pickle.load(open('pickles/tfidf.pkl', 'rb'))
 
-
+st.sidebar.markdown('# Board Game Recommendation System')
 eng = st.sidebar.selectbox('Please select a recommendation method', ['Description','Key Words'])
 
 if eng == 'Description':
@@ -41,7 +41,7 @@ if eng == 'Description':
                 flag += 1
                 break
         if flag == 0:
-            st.text('Provided information is not specific enough. Below are a list of random games for your reference')
+            st.text('Provided information is not specific enough. Below are random games for your reference!')
             game_list =[]
             for g in np.random.randint(0, 1499, 20):
                 game_list.append(f"[{title.loc[g, 'title']}](https://boardgamegeek.com/boardgame/{title.loc[g, 'object_id']})")
