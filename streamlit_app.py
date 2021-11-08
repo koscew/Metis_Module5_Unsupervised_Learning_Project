@@ -52,11 +52,12 @@ if eng == 'Search by Your Description':
 else:
     st.markdown('#### Please select one or more keywords of board games you like')
     key_list = ['solo', 'duo', '2p', '3p', '4p', '5p', '6p', '8p', 
-                'action', 'adventure', 'alien', 'animal', 'auction', 'army', 'battle', 'bidding', 
-                'card', 'character', 'city building', 'civilization', 'comics', 'cute',
-                'deck', 'dice', 'draft', 'draw', 'dungeon', 'escape', 'expansion', 
+                'action', 'adventure', 'alien', 'ancient', 'animal', 'area control', 'auction', 'army', 'battle', 'bidding', 
+                'car', 'card', 'character', 'city building', 'civilization', 'comics', 'cute',
+                'deck', 'dice', 'draft', 'draw', 'dungeon', 'economic', 'escape', 'expansion', 
                 'family', 'ghost', 'gold', 'guess', 'hero', 'horror', 'kid',
-                'luck', 'marvel', 'mission', 'monster', 'pandemic', 'party', 'planet', 'puzzle', 'quest', 'role', 'rpg', 
+                'luck', 'magic', 'majority', 'marvel', 'mission', 'monster', 
+                'pandemic', 'party', 'planet', 'puzzle', 'quest', 'racing', 'role', 'rpg', 
                 'scenario', 'ship', 'space', 'star trek', 'star war', 'strategy', 'stock', 'story', 
                 'team', 'ticket to ride', 'tile', 'train', 'wargame', 'weapon', 'zombie']
 
