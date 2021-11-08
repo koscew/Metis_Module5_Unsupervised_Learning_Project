@@ -27,7 +27,7 @@ if eng == 'Search by Your Description':
     if des_input != '':
         flag = 0
         t_nlp = [[w.lemma_.lower() for w in nlp(des_input) 
-                  if (not w.is_stop and not w.is_punct and not w.like_num) or (w.lemma_=='not')]]
+                  if not w.is_stop and not w.is_punct and not w.like_num]]
         for t in t_nlp[0]:
             if t in tfidf.get_feature_names():
                 t_clean= [' '.join(w) for w in t_nlp]
@@ -53,7 +53,7 @@ else:
     st.markdown('#### Please select one or more keywords of board games you like')
     key_list = ['solo', 'duo', '2p', '3p', '4p', '5p', '6p', '8p', 
                 'action', 'adult', 'adventure', 'alien', 'animal', 'auction', 'army', 'battle', 'bidding', 
-                'card', 'character', 'city building', 'civilization', 'comics',
+                'card', 'character', 'city building', 'civilization', 'comics', 'cute',
                 'deck', 'dice', 'draft', 'draw', 'dungeon', 'escape', 'expansion', 
                 'family', 'ghost', 'gold', 'guess', 'hero', 'horror', 'kid',
                 'luck', 'marvel', 'mission', 'monster', 'pandemic', 'party', 'planet', 'puzzle', 'quest', 'role', 'rpg', 
@@ -64,7 +64,7 @@ else:
     keywords = " ".join(keyword_list)
     if keyword_list != []:
         t_nlp = [[w.lemma_.lower() for w in nlp(keywords) 
-                  if (not w.is_stop and not w.is_punct and not w.like_num) or (w.lemma_=='not')]]
+                  if not w.is_stop and not w.is_punct and not w.like_num]]
         t_clean= [' '.join(w) for w in t_nlp]
 
         tt = pca.transform(tfidf.transform(t_clean).toarray())
