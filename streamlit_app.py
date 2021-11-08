@@ -52,7 +52,7 @@ if eng == 'Search by Your Description':
 else:
     st.markdown('#### Please select one or more keywords of board games you like')
     key_list = ['solo', 'duo', '2p', '3p', '4p', '5p', '6p', '8p', 
-                'action', 'adult', 'adventure', 'alien', 'animal', 'auction', 'army', 'battle', 'bidding', 
+                'action', 'adventure', 'alien', 'animal', 'auction', 'army', 'battle', 'bidding', 
                 'card', 'character', 'city building', 'civilization', 'comics', 'cute',
                 'deck', 'dice', 'draft', 'draw', 'dungeon', 'escape', 'expansion', 
                 'family', 'ghost', 'gold', 'guess', 'hero', 'horror', 'kid',
