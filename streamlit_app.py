@@ -52,12 +52,12 @@ if eng == 'Search by Your Description':
 else:
     st.markdown('#### Please select one or more keywords of board games you like')
     key_list = ['solo', 'duo', '2p', '3p', '4p', '5p', '6p', '8p', 
-                'action', 'adventure', 'alien', 'animal', 'auction', 'bidding', 
+                'action', 'adult', 'adventure', 'alien', 'animal', 'auction', 'army', 'battle', 'bidding', 
                 'card', 'character', 'city building', 'civilization', 'comics',
                 'deck', 'dice', 'draft', 'draw', 'dungeon', 'escape', 'expansion', 
-                'family', 'ghost', 'hero', 'horror', 'kid',
-                'marvel', 'monster', 'pandemic', 'party', 'puzzle', 'quest', 'role', 'rpg', 
-                'ship', 'space', 'star trek', 'star war', 'strategy', 'stock', 'story', 
+                'family', 'ghost', 'gold', 'guess', 'hero', 'horror', 'kid',
+                'luck', 'marvel', 'mission', 'monster', 'pandemic', 'party', 'planet', 'puzzle', 'quest', 'role', 'rpg', 
+                'scenario', 'ship', 'space', 'star trek', 'star war', 'strategy', 'stock', 'story', 
                 'team', 'ticket to ride', 'tile', 'train', 'wargame', 'weapon', 'zombie']
 
     keyword_list = st.multiselect('(You can also switch to self-enter mode at the sidebar to search by your description)', key_list)
