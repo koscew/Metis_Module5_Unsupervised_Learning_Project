@@ -22,7 +22,7 @@ eng = st.sidebar.selectbox('Please select a recommendation method', ['Search by 
 if eng == 'Search by Your Description':
     welcome = '''<h4 Please write down the names, types, or any description of the board games you like 
         or just type "game" to get random games. /h4>'''
-    st.markdown(welcome, unsafe_allow_html=True)
+    st.markdown(f'#### {welcome}')
     des_input = st.text_input("(You can also switch to preset-keyword mode at the sidebar if you don't have any idea for now)")
     if des_input != '':
         flag = 0
