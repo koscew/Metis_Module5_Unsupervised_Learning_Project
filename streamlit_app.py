@@ -20,7 +20,7 @@ eng = st.sidebar.selectbox('Please select a recommendation method', ['Search by 
 
 st.sidebar.write('Filters (refresh the page to clear the filters)')
 min_rating = st.sidebar.slider('Minimum Ratings', 6.0, 9.0, 6.0, 0.01)
-year = st.sidebar.slider('Publish Year', 1980, 2021, (1980,2021))
+year = st.sidebar.slider('Published Year', 1980, 2021, (1980,2021))
 player_min = st.sidebar.slider('Minimum Players', 1, 8, 1)
 player_max = st.sidebar.select_slider('Maximum Players', [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 16, 20, 30, 100], 100)
 time_min = st.sidebar.select_slider('Minimum Play Time', [2, 5, 10, 15, 20, 30, 45, 60, 120, 240, 480, 720], 2)
