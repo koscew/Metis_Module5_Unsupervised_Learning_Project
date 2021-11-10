@@ -16,7 +16,7 @@ title = pickle.load(open('pickles/title.pkl', 'rb'))
 tfidf = pickle.load(open('pickles/tfidf.pkl', 'rb'))
 
 st.sidebar.markdown('# Board Game Recommendation System')
-st.sidebar.wrtie('(A NLP model built on BGG player comments)')
+st.sidebar.text('(A NLP model built on BGG player comments)')
 eng = st.sidebar.selectbox('Please select a recommendation method', ['Search by Your Description','Preset Keywords'])
 
 st.sidebar.write('Filters (refresh the page to clear the filters)')
