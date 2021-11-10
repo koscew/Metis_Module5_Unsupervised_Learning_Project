@@ -68,7 +68,7 @@ if eng == 'Search by Your Description':
                 flag += 1
                 break
         if flag == 0:
-            st.text('Provided information is not specific enough. Below are random games for your reference!')
+            st.write('Provided information is not specific enough. Below are random games for your reference!')
             game_list =[]
             arr = np.arange(1500)
             np.random.shuffle(arr)
