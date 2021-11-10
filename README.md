@@ -22,8 +22,8 @@ This is the fifth project of Metis Data Science Bootcamp. We are going to use da
 
 [Data](data/)
 
-***
 -->
+***
 
 [MVP](mvp.md)
 
