@@ -15,7 +15,7 @@ tfidf = pickle.load(open('pickles/tfidf.pkl', 'rb'))
 
 st.sidebar.markdown('# Board Game Recommendation System')
 st.sidebar.write('(A NLP model built on BGG player comments)')
-eng = st.sidebar.selectbox('Please select a recommendation method', ['Search by Your Description','Preset Keywords'])
+eng = st.sidebar.selectbox('Please select a recommendation method', ['Search by Your Own Words','Preset Keywords'])
 
 st.sidebar.write('Filters (refresh the page to clear the filters)')
 min_rating = st.sidebar.slider('Minimum Ratings', 6.0, 9.0, 6.0, 0.01)
@@ -38,7 +38,7 @@ title_fil = title[(title['avg_rating'] >= min_rating) &
                   
 st.sidebar.write(f'Total: {len(title_fil)} games')
 
-if eng == 'Search by Your Description':
+if eng == 'Search by Your Own Words':
     welcome = '''Please write down the names, types, or any description of the board games you like \
     or just type "game" to get random games.'''
     st.markdown(f'#### {welcome}')
