@@ -15,7 +15,7 @@ This is the fifth project of Metis Data Science Bootcamp. We are going to use da
 
 [Project Writeup](project_writeup.md)
 
-[Codes](codes/)
+[Codes](codes/) / [Streamlit application code](streamlit_app.py)
 
 ***
 
