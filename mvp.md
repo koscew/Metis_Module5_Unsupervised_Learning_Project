@@ -17,7 +17,7 @@ Card Drafting|card, hand, draft, draw, round, luck, score, filler, discard, set|
 Strategy Economic|action, cube, area, board, euro, feld, control, round, rondel, selection|8.3%
 Wargame|unit, war, wargame, battle, scenario, combat, army, asl, memoir, map|7.4%
 Family Cardgame|star, nostar, ize, size, halfstar, x2, x1, gg, x5, thumbsup|7.1%
-Dice Rolliing|dice, roll, die, luck, yahtzee, solo, write, number, use, high|6.7%
+Dice Rolling|dice, roll, die, luck, yahtzee, solo, write, number, use, high|6.7%
 Thematic Dungeons|dungeon, monster, character, hero, quest, scenario, adventure, campaign, story, miniature|6.1%
 Party Word Game|clue, deduction, word, party, werewolf, team, guess, role, codename, people|5.8%
 City Building|tile, carcassonne, scoring, score, city, castle, place, lie, azul, board|5.4%

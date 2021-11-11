@@ -9,7 +9,6 @@ This is the fifth project of Metis Data Science Bootcamp. We are going to use da
 
 [Board Game Recommendation System on Streamlit](https://share.streamlit.io/koscew/metis_module5_unsupervised_learning_project/main)
 
-<!---
 ***
 
 [Presentation Slides](final_presentation.pdf)
@@ -18,15 +17,10 @@ This is the fifth project of Metis Data Science Bootcamp. We are going to use da
 
 [Codes](codes/)
 
-[Tableau Public](https://public.tableau.com/app/profile/koscew/viz/Scherzer/Last_pitch) (EDA)
-
 ***
 
 [Charts](images/)
 
-[Data](data/)
-
--->
 ***
 
 [MVP](mvp.md)
