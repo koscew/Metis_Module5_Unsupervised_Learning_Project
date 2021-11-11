@@ -3,13 +3,11 @@ import pickle
 import pandas as pd
 import numpy as np
 from sklearn.metrics.pairwise import cosine_distances
-#models = ["en_core_web_sm", "en_core_web_md"]
 import spacy
 nlp = spacy.load('en_core_web_sm')
 
 pca = pickle.load(open('pickles/pca.pkl', 'rb'))
 pca_proj = pickle.load(open('pickles/pca_proj.pkl', 'rb'))
-
 #nmf = pickle.load(open('pickles/nmf.pkl', 'rb'))
 #nmf_matrix = pickle.load(open('pickles/nmf_matrix.pkl', 'rb'))
 title = pickle.load(open('pickles/title.pkl', 'rb'))

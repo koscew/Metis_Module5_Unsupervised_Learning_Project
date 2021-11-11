@@ -11,7 +11,7 @@ I am going to use comments from board game players on [Board Game Geek](https://
   * I planned to scrape 40 over-500-character comments randomly per game of Top 1500 board games on [Board Game Geek](https://boardgamegeek.com/). However, there were less than 40 comments with more than 500 characters for some games. I tried to decrease the threshold of the games without 40 over-500-character comments and tried to get at least 20 comments for each game. The final dataset contained total 56,951 data points. I will group the comments by the 1500 games. 
  
 * An individual sample/unit (total 32 columns):  
-	object\_id, username, 15%rating, comment,  
+	object\_id, username, rating, comment,  
 	alias, board\_game\_rank, title, year, geek\_rating,  
 	avg\_rating, num\_voters, minplayers, maxplayers,  
 	playingtime, minplaytime, maxplaytime,   
