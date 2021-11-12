@@ -6,12 +6,16 @@ from sklearn.metrics.pairwise import cosine_distances
 import spacy
 nlp = spacy.load('en_core_web_sm')
 
-pca = pickle.load(open('pickles/pca.pkl', 'rb'))
-pca_proj = pickle.load(open('pickles/pca_proj.pkl', 'rb'))
 #nmf = pickle.load(open('pickles/nmf.pkl', 'rb'))
 #nmf_matrix = pickle.load(open('pickles/nmf_matrix.pkl', 'rb'))
-title = pickle.load(open('pickles/title.pkl', 'rb'))
-tfidf = pickle.load(open('pickles/tfidf.pkl', 'rb'))
+with open('pickles/pca.pkl', 'rb') as f:
+    pca = pickle.load(f)
+with open('pickles/pca_proj.pkl', 'rb') as f:
+    pca_proj = pickle.load(f)
+with open('pickles/title.pkl', 'rb') as f:
+    title = pickle.load(f)
+with open('pickles/tfidf.pkl', 'rb') as f:
+    tfidf = pickle.load(f)
 
 st.sidebar.markdown('# Board Game Recommendation System')
 st.sidebar.write('(A NLP model built on BGG player comments)')
